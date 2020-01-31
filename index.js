@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import PropTypes from "prop-types"
 
 const COOKIE_DESCRIPTION = "GATSBY_OPT_IN"
 
@@ -36,4 +37,8 @@ export const OptInWrapper = ({ children }) => {
   if (hide) return null
 
   return <>{children}</>
+}
+
+OptInWrapper.propTypes = {
+  children: PropTypes.node.isRequired,
 }
