@@ -4,8 +4,9 @@ This plugin is used when you need a users permission before executing scripts. T
 
 ## Getting Started
 
-`npm install gatsby-plugin-optin`
-`yarn add gatsby-plugin-optin`
+`npm install gatsby-plugin-optin-scripts`
+
+`yarn add gatsby-plugin-optin-scripts`
 
 ## How to use
 
@@ -13,7 +14,7 @@ Set up `gatsby-config.js`
 
 ```javascript
 {
-    resolve: `gatsby-plugin-optin`,
+    resolve: `gatsby-plugin-optin-scripts`,
     options: {
         scripts: [
             `<script>alert('hi');</script>`,
@@ -35,7 +36,7 @@ import {
   OptInWrapper,
   userOptsIn,
   userOptsOut,
-} from "gatsby-plugin-optin"
+} from "gatsby-plugin-optin-scripts"
 
 ...
 
@@ -49,6 +50,20 @@ return (
     ...
     </>
 )
+```
+
+Checking if user has opted/has accepted to load scripts.
+
+```javascript
+import { userHasChosen, userOptedIn } from "gatsby-plugin-optin-scripts"
+
+if (userOptedIn()) {
+  // do this
+}
+
+if (userHasChosen() && !userOptedIn()) {
+  // do that
+}
 ```
 
 ## License
