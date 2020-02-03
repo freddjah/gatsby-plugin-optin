@@ -1,6 +1,6 @@
 {
   "name": "gatsby-plugin-optin-scripts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A plugin to handle code execution when a user opts in",
   "main": "index.js",
   "author": "Fredrik Eklööf <fredrik.ekloof@gmail.com>",
